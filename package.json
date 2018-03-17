@@ -1,0 +1,23 @@
+{
+  "name": "trainingsass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EarthW0rm/TrainingSass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EarthW0rm/TrainingSass/issues"
+  },
+  "homepage": "https://github.com/EarthW0rm/TrainingSass#readme"
+  
+}
