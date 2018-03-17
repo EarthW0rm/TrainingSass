@@ -11,7 +11,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "echo Iniciando",
     "preinstall": "rm -rf src\\vendor",
-    "postinstall": "mkdir src\\vendor && mkdir src\\vendor\\bootstrap && mkdir src\\vendor\\font-awesome && cp -r node_modules/bootstrap/dist src/vendor/bootstrap && cp -r node_modules/font-awesome/css src/vendor/font-awesome/css && cp -r node_modules/font-awesome/fonts src/vendor/font-awesome/fonts"
+    "postinstall": "mkdir src\\vendor && mkdir src\\vendor\\bootstrap && mkdir src\\vendor\\font-awesome && cp -r node_modules/bootstrap/dist/* src/vendor/bootstrap && cp -r node_modules/font-awesome/css src/vendor/font-awesome/css && cp -r node_modules/font-awesome/fonts src/vendor/font-awesome/fonts"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "bugs": {
     "url": "https://github.com/EarthW0rm/TrainingSass/issues"
   },
-  "homepage": "https://github.com/EarthW0rm/TrainingSass#readme"
+  "homepage": "https://github.com/EarthW0rm/TrainingSass#readme",
+  "devDependencies": {
+    "node-sass": "^4.7.2"
+  }
 }
