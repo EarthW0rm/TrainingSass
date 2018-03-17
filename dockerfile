@@ -4,6 +4,6 @@ RUN apk update && apk add nginx && apk add openrc --no-cache && adduser -D -g 'w
     && chown -R www:www /www && mv /etc/nginx/nginx.conf /etc/nginx/nginx.conf.orig \
     && mkdir -p /run/nginx
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY *.html /www
+COPY /Projeto/*.* /www
 RUN nginx -t
 CMD ["nginx", "-g", "daemon off;"]
