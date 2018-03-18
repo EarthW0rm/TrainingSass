@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
 Projeto/src/vendor
+Projeto/src/css/main.css

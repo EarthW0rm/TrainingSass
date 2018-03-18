@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "dependencies": {
+  "dependencies": { 
     "bootstrap": "^3.3.7",
     "font-awesome": "^4.7.0"
   },
@@ -12,7 +12,7 @@
     , "start": "echo Iniciando"
     , "preinstall": "rm -rf src\\vendor"
     , "postinstall": "mkdir src\\vendor && mkdir src\\vendor\\bootstrap && mkdir src\\vendor\\font-awesome && cp -r node_modules/bootstrap/dist/* src/vendor/bootstrap && cp -r node_modules/font-awesome/css src/vendor/font-awesome/css && cp -r node_modules/font-awesome/fonts src/vendor/font-awesome/fonts"
-    , "sass": "node-sass"
+    , "sass": "node-sass" 
   },
   "repository": {
     "type": "git",
