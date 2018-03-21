@@ -10,10 +10,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "echo Iniciando",
-    "preinstall": "rm -rf src\\vendor",
-    "postinstall": "mkdir src\\vendor && mkdir src\\vendor\\bootstrap && mkdir src\\vendor\\font-awesome && cp -r node_modules/bootstrap/dist/* src/vendor/bootstrap && cp -r node_modules/font-awesome/css src/vendor/font-awesome/css && cp -r node_modules/font-awesome/fonts src/vendor/font-awesome/fonts",
-    "sass": "node-sass",
-    "gulp": "gulp"
+    "preinstall": "rm -rf src/vendor",
+    "postinstall": "mkdir src/vendor && mkdir src/vendor/bootstrap && mkdir src/vendor/font-awesome && cp -r node_modules/bootstrap/dist/* src/vendor/bootstrap && cp -r node_modules/font-awesome/css src/vendor/font-awesome/css && cp -r node_modules/font-awesome/fonts src/vendor/font-awesome/fonts",
+    "sass": "node-sass"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,6 @@
   },
   "homepage": "https://github.com/EarthW0rm/TrainingSass#readme",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-sass": "^3.1.0"
+    "node-sass": "^4.7.2"
   }
 }
