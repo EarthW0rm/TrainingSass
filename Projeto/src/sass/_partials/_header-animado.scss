@@ -2,5 +2,95 @@
 .header-animado {
     $h:300px;
     background-color: $main-color;
-    height: $h;
+    min-height: $h;
+    padding-top: 96px; 
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+
+    .header-animado__title{
+        color: darken($main-color, 35%);
+        font-size: 34px;
+        font-weight: bold;
+    }
+
+    .header-animado__subtitle{
+        color: white;
+        font-size:30px;
+        font-weight: 300;
+    }
+
+    &__ilustra{
+        $largura_cenario: 2400px;
+
+        background-image: url('../imagens/cenario_all_960.png');
+        height: $h/2;
+        background-size:auto 100%; 
+        background-position: center top;
+        margin-top: $h/4;
+
+        &>div{
+            display: none;
+        }
+
+        @keyframes anima_cenario{
+            from{
+                transform: translateX(-50%) translateZ(0);
+            }
+            to{
+                transform: translateX(0%) translateZ(0%);
+            }
+        }
+
+        @mixin animacao_item($imageName, $tempo, $reverse ) {
+            background-image: url('../imagens/#{$imageName}');
+            animation: anima_cenario $tempo linear infinite $reverse;
+        }
+    
+
+        @media screen and (min-width: 480px){
+            background-image: url('../imagens/cenario_all_1530.png');
+        }
+
+        @media screen and (min-width: 960px) {
+            background-image: url('../imagens/cenario_bg.png');
+            height: $h;
+            position: relative;
+
+            &>div{
+                display: block;
+                height: 100%;
+                position: absolute;
+                //Esse tamanho 'e relacionado com o tamanho da animacao
+                width: $largura_cenario * 2;
+                top: 0px;
+                left: 0px;
+            }
+
+            $time_anima_base: 50s;
+
+            .nuvens{
+                @include animacao_item('cenario_nuvens.png', $time_anima_base * 3 , reverse);
+            }
+
+            .casas{
+                @include animacao_item('cenario_casas.png', $time_anima_base , null);
+            }
+ 
+            .rua{
+                @include animacao_item('cenario_rua.png', $time_anima_base , null);
+            }
+
+            .carrosCima{
+                @include animacao_item('cenario_carrosCima.png', $time_anima_base / 2 , reverse);
+            }
+
+            .carrosBaixo{ 
+                @include animacao_item('cenario_carrosBaixo.png', $time_anima_base / 2  , null);
+            }
+
+            
+
+                            
+        }
+    }
 }
