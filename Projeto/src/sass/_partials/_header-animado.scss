@@ -68,29 +68,19 @@
 
             $time_anima_base: 50s;
 
-            .nuvens{
-                @include animacao_item('cenario_nuvens.png', $time_anima_base * 3 , reverse);
-            }
-
-            .casas{
-                @include animacao_item('cenario_casas.png', $time_anima_base , null);
-            }
- 
-            .rua{
-                @include animacao_item('cenario_rua.png', $time_anima_base , null);
-            }
-
-            .carrosCima{
-                @include animacao_item('cenario_carrosCima.png', $time_anima_base / 2 , reverse);
-            }
-
-            .carrosBaixo{ 
-                @include animacao_item('cenario_carrosBaixo.png', $time_anima_base / 2  , null);
-            }
-
+            $itens: (
+                nuvens: (url: 'cenario_nuvens.png', tempo: $time_anima_base * 3 , estado: reverse,),
+                casas: (url: 'cenario_casas.png', tempo: $time_anima_base , estado: null,),
+                rua: (url: 'cenario_rua.png', tempo: $time_anima_base , estado: null,),
+                carrosCima: (url: 'cenario_carrosCima.png', tempo: $time_anima_base / 2 , estado: reverse,),
+                carrosBaixo: (url: 'cenario_carrosBaixo.png', tempo: $time_anima_base / 2  , estado: null,),
+            );
             
-
-                            
+            @each $key, $obj in $itens{
+                .#{$key}{
+                    @include animacao_item(map-get($obj, url),  map-get($obj, tempo), map-get($obj, estado));
+                }
+            }                             
         }
     }
 }
