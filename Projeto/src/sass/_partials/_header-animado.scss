@@ -6,6 +6,7 @@
     padding-top: 96px; 
     margin-bottom: 0px;
     padding-bottom: 0px;
+    
 
     .header-animado__title{
         color: darken($main-color, 35%);
@@ -21,7 +22,8 @@
 
     &__ilustra{
         $largura_cenario: 2400px;
-
+        
+        overflow: hidden;
         background-image: url('../imagens/cenario_all_960.png');
         height: $h/2;
         background-size:auto 100%; 
