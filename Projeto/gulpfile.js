@@ -13,13 +13,15 @@ gulp.task('listen', function(){
 });
 
 gulp.task('server-dev', function(){
+    //Esse cara inicia o server do browserSync
     browserSync.init({
         server:{
             baseDir: 'src'
         }
     });
 
-    gulp.watch('./src/css/*.css').on('change', browserSync.reload);
+    //O m'etodo browserSync.reload updata o browser na alteraco do arquivo
+    gulp.watch('./src/**/*').on('change', browserSync.reload);
 
     gulp.watch('./src/sass/**/*.scss', ['sass']);
 
